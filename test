@@ -33,3 +33,6 @@ Om te inleveren zou ik je project op git plaatsen en in je public folder een .tx
 maak ook een gif dat je op 127.0.0.1 staat en dat je refreshed en ff je address bar highlight. 
 
 lever gwn in
+
+---------------------
+cascade={"persist", "remove"}
