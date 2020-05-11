@@ -1,0 +1,35 @@
+1) Installeer deze composer
+composer require symfony/apache-pack
+
+2)Als dit is geinstalleerd dan wordt er in /public/ folder een .htaccess file gemaakt. 
+
+3)Ga naar deze route in je xampp:
+xampp\apache\conf\extra\httpd-vhosts.conf
+
+4)Ga naar beneden van de file en voeg dit toe : 
+
+<VirtualHost 127.0.0.1:80>
+    DocumentRoot "C:/xampp72/htdocs/php/sandbox/public"
+    DirectoryIndex index.php
+
+    <Directory "C:/xampp72/htdocs/php/sandbox/public">
+        AllowOverride All
+        Order Allow,Deny
+        Allow from All
+    </Directory>
+</VirtualHost>
+
+De directory moet je veranderen naar je eigen directory(Public folder directory)
+
+5) Rij in een automaat 
+
+6) ga naar je env file en zoek daar naar "dev"en verander dit naar "prod".
+*je hoeft geen scheme update ofzo"
+
+7) in principe ben je nu klaar open nu xampp en ga naar 127.0.0.1 
+en hij moet automatisch daar zijn.
+
+Om te inleveren zou ik je project op git plaatsen en in je public folder een .txt file maken met die http.vhost copy.
+maak ook een gif dat je op 127.0.0.1 staat en dat je refreshed en ff je address bar highlight. 
+
+lever gwn in
